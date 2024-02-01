@@ -3591,8 +3591,8 @@
           "war_archives_20220414_cn"
         ],
         "option_bold": [
-          "war_archives_20220414_cn",
-          "war_archives_20210527_cn"
+          "war_archives_20210527_cn",
+          "war_archives_20220414_cn"
         ],
         "cn": "war_archives_20210527_cn",
         "en": "war_archives_20210527_cn",
@@ -8000,7 +8000,8 @@
         "type": "select",
         "value": 2,
         "option": [
-          2
+          2,
+          3
         ]
       },
       "ShipIndex": {
@@ -8033,7 +8034,8 @@
         "option": [
           1,
           2,
-          3
+          3,
+          4
         ]
       },
       "ShipIndex": {
