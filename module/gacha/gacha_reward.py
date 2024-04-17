@@ -69,6 +69,10 @@ class RewardGacha(GachaUI, GeneralShop, Retirement):
                 ocr_submit = OCR_BUILD_SUBMIT_WW_COUNT
                 confirm_timer.reset()
                 continue
+            # Continue gacha even if UR exchange point is full
+            if self.handle_popup_confirm('GACHA_PREP'):
+                confirm_timer.reset()
+                continue
 
             # End
             if self.appear(BUILD_PLUS, offset=index_offset) \
@@ -320,6 +324,9 @@ class RewardGacha(GachaUI, GeneralShop, Retirement):
             buy[0] = self.build_ticket_count
             # Calculate rolls allowed based on configurations and resources
             buy[1] = self.gacha_calculate(self.config.Gacha_Amount-self.build_ticket_count, gold_cost, cube_cost)
+        else:
+            LogRes(self.config).Cube = self.build_cube_count
+            self.config.update()
 
         # Submit 'buy_count' and execute if capable
         # Cannot use handle_popup_confirm, this window
