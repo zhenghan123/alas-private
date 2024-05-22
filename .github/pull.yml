@@ -1,8 +1,5 @@
 version: "1"
 rules:
-  - base: master
-    upstream: LmeSzinc:master
-    mergeMethod: merge
   - base: smallkai
     upstream: LmeSzinc:master
     mergeMethod: merge
